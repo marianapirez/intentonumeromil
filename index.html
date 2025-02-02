@@ -11,8 +11,8 @@
         <!-- Página 1: Ingreso del nombre -->
         <section id="pagina1">
             <h1>Confirme la asistencia a los quince años de Luciana</h1>
-            <p>Ingrese su primer Nombre y primer Apellido</p>
-            <input type="text" id="nombre" placeholder="Ej: Primer nombre y primer apellido">
+            <p>Ingrese su nombre y apellido</p>
+            <input type="text" id="nombre" placeholder="Escriba aquí">
             <button id="continuarBtn">Continuar</button>
         </section>
 
@@ -24,24 +24,43 @@
             <p>¿Confirma su asistencia?</p>
             <div class="radio-container">
                 <label class="radio-label">
-                    <input type="radio" name="asistencia" value="si"> Sí
+                    <input type="radio" name="asistencia" value="si"> Si
                 </label>
                 <label class="radio-label">
                     <input type="radio" name="asistencia" value="no"> No
                 </label>
             </div>
             <p>¿Cuántos lugares confirma?</p>
-            <input type="number" id="lugaresConfirmados" min="1" placeholder="1">
+            <p>(si no asistirá escriba "0")</p>
+            <input type="number" id="lugaresConfirmados" min="0" placeholder="-">
             <button id="confirmarBtn">Enviar</button>
         </section>
 
-        <!-- Página 3: Agradecimiento -->
+        <!-- Página 3: Ver confirmaciones (solo anfitrión) -->
         <section id="pagina3" style="display: none;">
-            <h1 id="mensajeGracias">¡Gracias por confirmar tu asistencia!</h1>
-            <p id="detalleGracias">Nos vemos en los quince años de Luciana.</p>
+            <h1>Confirmaciones de Asistencia</h1>
+            <table id="tablaConfirmaciones">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Asistencia</th>
+                        <th>Lugares Confirmados</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Las confirmaciones se agregarán aquí -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Página 4: Agradecimiento -->
+        <section id="pagina4" style="display: none;">
+            <h1 id="mensajeGracias">Gracias por confirmar tu asistencia.</h1>
+            <p id="detalleGracias">¡Nos vemos en mis quince años!.</p>
         </section>
     </div>
 
     <script src="script.js"></script>
 </body>
 </html>
+
